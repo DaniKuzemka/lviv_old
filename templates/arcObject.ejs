@@ -1,0 +1,38 @@
+<%- include('sub/head.ejs') %>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-default">      
+      <div class="navbar-header">
+         <a class="navbar-brand" href="/list/<%= type.id %>">
+         	<p class="text-primary">
+         		<span class="glyphicon glyphicon-arrow-up"></span>
+				<strong><%= type.typeName %></strong>
+         	</p>
+         </a>
+      </div>
+    </nav>
+    <div class="text-center page-header container-fluid" 
+      style="font-family:Times; background-color: #eeeeff">	 
+      <!-- <h1>Церква святого Миколая</h1> --> 
+	  <h2><%= object.objName %></h2>
+    </div>
+	
+
+  	<div class="row">  	  
+		<div class="col-lg-3 col-md-4 col-sm-5">
+    		<img src="/images/<%= object.image %>" alt "<%= object.image %>"
+    			class="center-block img-responsive img-thumbnail">
+		</div>
+  	  <div class="col-lg-8 col-md-7 col-sm-6">
+    		<p class="text-justify">
+				<%= object.descr %>
+    		</p>
+        </br>
+        <p>
+		  Сучасна адреса: <%= object.curAddress %>
+        </p>		
+  	  </div>
+  	</div>
+  </div>
+</body>
+</html>
