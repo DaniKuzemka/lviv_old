@@ -19,8 +19,9 @@ app.get('/list/:id', views.listObjects)
 // app.get('/obj/:id/', views.arcObject)
 app.get('/obj/:id/', views.arcObject)
 app.use("*", views.error404)
-app.listen(3000, () => {
-	console.log("Сервер починає прослуховувати підключення на порт 3000...")
+var port = process.env.PORT || 3000;
+app.listen(port, () => {
+	console.log("Сервер починає прослуховувати підключення на порт 3000..." + port)
 })
 
 
